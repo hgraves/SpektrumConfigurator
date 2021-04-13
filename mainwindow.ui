@@ -14,7 +14,10 @@
    <string>Spektrum Configurator</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTabWidget" name="tabWidget">
+   <widget class="QTabWidget" name="acroTabs">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -3548,12 +3551,12 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="loadFilenameLine">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>480</y>
-      <width>481</width>
+      <width>681</width>
       <height>25</height>
      </rect>
     </property>
@@ -3561,7 +3564,7 @@
    <widget class="QPushButton" name="saveAs_pushButton">
     <property name="geometry">
      <rect>
-      <x>500</x>
+      <x>810</x>
       <y>480</y>
       <width>89</width>
       <height>25</height>
@@ -3574,7 +3577,7 @@
    <widget class="QPushButton" name="loadFile_pushButton">
     <property name="geometry">
      <rect>
-      <x>620</x>
+      <x>710</x>
       <y>480</y>
       <width>89</width>
       <height>25</height>
@@ -3584,6 +3587,64 @@
      <string>Load File...</string>
     </property>
    </widget>
+   <widget class="QTabWidget" name="heliTabs">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>891</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="HeliSetup">
+     <attribute name="title">
+      <string>Setup</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="HeliServo">
+     <attribute name="title">
+      <string>Servo</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="HeliDR_Expo">
+     <attribute name="title">
+      <string>D/R - Expo</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="HeliDifferential">
+     <attribute name="title">
+      <string>Differential</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="HeliThrottleCut">
+     <attribute name="title">
+      <string>ThrottleCut</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="HeliFlapSystem">
+     <attribute name="title">
+      <string>FlapSystem</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="HeliMixing">
+     <attribute name="title">
+      <string>Mixing</string>
+     </attribute>
+    </widget>
+   </widget>
+   <zorder>heliTabs</zorder>
+   <zorder>acroTabs</zorder>
+   <zorder>ModelNumber_label</zorder>
+   <zorder>ModelName_label</zorder>
+   <zorder>ModelName_lineEdit</zorder>
+   <zorder>frame</zorder>
+   <zorder>ModelNumbercomboBox</zorder>
+   <zorder>loadFilenameLine</zorder>
+   <zorder>saveAs_pushButton</zorder>
+   <zorder>loadFile_pushButton</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
